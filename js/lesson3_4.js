@@ -13,7 +13,6 @@ const addtable = () => {
     const todo = { task: comment.value, status: "作業中", deletion: "削除" };
     todos.push(todo);
     listdescription();
-    sort();
 }
 
 function listdescription() {
@@ -64,6 +63,7 @@ function listdescription() {
         });
     });
     comment.value = "";
+    sort();
 }
 
 changetask.forEach(function(value,index){
