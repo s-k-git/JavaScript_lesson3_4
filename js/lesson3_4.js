@@ -66,35 +66,35 @@ function listdescription() {
     sort();
 }
 
-changetask.forEach(function(value,index){
+changetask.forEach(function (value, index) {
     changetask[index].addEventListener("click", () => {
         sort();
     });
 });
 
-    const sort = () => {
-        const finished = document.getElementsByClassName("finished");
-        const working = document.getElementsByClassName("working");
-        if (changetask[1].checked) {
-            for (let i = 0; i < finished.length; i++) {
-                finished[i].style.display = "none";
-            };
-            for (let j = 0; j < working.length; j++) {
-                working[j].style.display = "table-row";
-            };
-        } else if (changetask[2].checked) {
-            for (let j = 0; j < working.length; j++) {
-                working[j].style.display = "none";
-            };
-            for (let i = 0; i < finished.length; i++) {
-                finished[i].style.display = "table-row";
-            };
-        } else {
-            for (let j = 0; j < working.length; j++) {
-                working[j].style.display = "table-row";
-            };
-            for (let i = 0; i < finished.length; i++) {
-                finished[i].style.display = "table-row";
-            };
-        }
-    } 
+const sort = () => {
+    const finished = document.getElementsByClassName("finished");
+    const working = document.getElementsByClassName("working");
+    if (changetask[1].checked) {
+        for (let i = 0; i < finished.length; i++) {
+            finished[i].style.display = "none";
+        };
+        for (let j = 0; j < working.length; j++) {
+            working[j].style.display = "table-row";
+        };
+    } else if (changetask[2].checked) {
+        for (let j = 0; j < working.length; j++) {
+            working[j].style.display = "none";
+        };
+        for (let i = 0; i < finished.length; i++) {
+            finished[i].style.display = "table-row";
+        };
+    } else {
+        for (let j = 0; j < working.length; j++) {
+            working[j].style.display = "table-row";
+        };
+        for (let i = 0; i < finished.length; i++) {
+            finished[i].style.display = "table-row";
+        };
+    }
+}
